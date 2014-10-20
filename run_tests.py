@@ -2,11 +2,11 @@
 
 import sys
 import unittest
-from tests.selenium_tests import SeleniumTestsCase
+from tests.selenium_tests import SeleniumTestCase
 
 if __name__ == '__main__':
     suite = unittest.TestSuite((
-        unittest.makeSuite(SeleniumTestsCase),
+        unittest.makeSuite(SeleniumTestCase),
     ))
     result = unittest.TextTestRunner().run(suite)
     sys.exit(not result.wasSuccessful())
