@@ -1,20 +1,19 @@
 # coding=utf-8
 __author__ = 'alexander'
 
-import os
 import unittest
-from selenium import webdriver
+from selenium.webdriver import Remote, DesiredCapabilities
 from objects.pages import CreatePage, AuthPage
 from objects.constans import UserData, BannerData, AgeRestrictionsData
 
 
 class SeleniumTestCase(unittest.TestCase):
     def setUp(self):
-        #self.driver = Remote(
-        #    command_executor='http://127.0.0.1:4444/wd/hub',
-        #    desired_capabilities=DesiredCapabilities.FIREFOX.copy()
-        #)
-        self.driver = webdriver.Firefox()
+        self.driver = Remote(
+            command_executor='http://127.0.0.1:4444/wd/hub',
+            desired_capabilities=DesiredCapabilities.FIREFOX.copy()
+        )
+        #self.driver = webdriver.Firefox()
         #
         auth_page = AuthPage(self.driver)
         auth_page.open()

@@ -1,7 +1,6 @@
 # coding=utf-8
 __author__ = 'alexander'
 
-from selenium.webdriver import ActionChains, DesiredCapabilities, Remote
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from constans import CSSSelectors, BannerData, AgeRestrictionsData
 
