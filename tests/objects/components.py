@@ -154,6 +154,11 @@ class Interests(Component):
         ).click()
 
     def show_selected_sub_interests(self):
+        WebDriverWait(self.driver, 30, 1).until(
+            expected_conditions.staleness_of(
+                get_element_by_css_selector(self.driver, self.SHOW_SELECTED_SUB_INTERESTS)
+            )
+        )
         get_element_by_css_selector(self.driver, self.SHOW_SELECTED_SUB_INTERESTS).click()
 
     def show_sub_interests(self):
@@ -163,9 +168,6 @@ class Interests(Component):
         get_element_by_css_selector(self.driver, self.ALL_SUB_INTERESTS).click()
 
     def select_sub_interest(self, interest_id):
-        #WebDriverWait(self.driver, 30, 1).until(
-        #    lambda d: d.find_element_by_xpath(self.SUB_INTEREST.format(interest_id))
-        #).click()
         WebDriverWait(self.driver, 30, 1).until(
             expected_conditions.element_to_be_clickable((By.XPATH, self.SUB_INTEREST.format(interest_id)))
         ).click()
