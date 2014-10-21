@@ -3,9 +3,14 @@ __author__ = 'alexander'
 import os
 
 
+class WebDriverSettings(object):
+    TIMEOUT = 30
+    POLL_FREQUENCY = 0.1
+
+
 class UserData(object):
     USERNAME = 'tech-testing-ha2-24'
-    PASSWORD = os.environ.get('TTHA2PASSWORD')
+    PASSWORD = os.environ.get('TTHA2PASSWORD', 'Pa$$w0rD-24')
     USER_DOMAIN = '@bk.ru'
 
 
