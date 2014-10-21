@@ -10,7 +10,7 @@ class WebDriverSettings(object):
 
 class UserData(object):
     USERNAME = 'tech-testing-ha2-24'
-    PASSWORD = os.environ.get('TTHA2PASSWORD', 'Pa$$w0rD-24')
+    PASSWORD = os.environ.get('TTHA2PASSWORD')
     USER_DOMAIN = '@bk.ru'
 
 
