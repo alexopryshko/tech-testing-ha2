@@ -10,6 +10,7 @@ class WebDriverSettings(object):
 
 class UserData(object):
     USERNAME = 'tech-testing-ha2-24'
+    #PASSWORD = os.environ.get('TTHA2PASSWORD', 'Pa$$w0rD-24')
     PASSWORD = os.environ.get('TTHA2PASSWORD')
     USER_DOMAIN = '@bk.ru'
 
@@ -29,7 +30,7 @@ class BannerData(object):
     HEADER = 'Titan'
     TEXT = 'Titan is a 2014 multiplayer first-person shooter video game'
     LINK = 'http://my.mail.ru/apps/ID'
-    IMG = '/Users/alexander/Development/tech-testing-selenium/res/banner_img.png'
+    IMG = 'res/banner_img.png'
 
 
 class CSSSelectors(object):
